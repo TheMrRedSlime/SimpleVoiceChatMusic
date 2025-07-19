@@ -44,7 +44,7 @@ public final class SimpleVoiceChatMusic extends JavaPlugin {
         stop = new StopCommand();
         volume = new VolumeCommand();
 
-        LOGGER.info("Loaded Simple Voice Chat Music! Credit to SimpleVoiceChatMusic on Modrinth - the original fabric version!");
+        LOGGER.info("Loaded Simple Voice Chat Music!");
     }
 
     @Override
@@ -77,7 +77,7 @@ public final class SimpleVoiceChatMusic extends JavaPlugin {
             }
             return true;
         }
-        if(label.equalsIgnoreCase("music")) {
+        if(label.equalsIgnoreCase("music") || label.equalsIgnoreCase("svcmusic")) {
             if(args.length == 0) {
                 sender.sendMessage("/music <play/stop/pause/bassboost/kill/playing/queue/resume/search/skip/volume>");
                 return true;

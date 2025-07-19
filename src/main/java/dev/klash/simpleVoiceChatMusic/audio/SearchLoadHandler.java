@@ -32,7 +32,7 @@ public class SearchLoadHandler implements AudioLoadResultHandler {
 
         if (source != null) {
             this.group.broadcast(
-                Text.literal("Enqueued ")
+                Text.literal("Enqueued: ")
                     .append(ModUtils.trackInfo(track.getInfo(), true))
                     .append(Text.literal(" - ")).append(Text.literal(Objects.requireNonNull(source).getName()))
             );

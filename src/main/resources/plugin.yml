@@ -1,5 +1,5 @@
 name: SimpleVoiceChatMusic
-version: '1.0.0'
+version: '1.0.1'
 main: dev.klash.simpleVoiceChatMusic.SimpleVoiceChatMusic
 api-version: '1.21'
 authors: [ GavinGoGaming ]
@@ -10,6 +10,7 @@ commands:
     description: Play music in voice chat.
     usage: /music <...>
     permission: simplevoicechatmusic.music
+    aliases: [ svcmusic ]
   music_register_service:
     description: Register SVCM plugin service.
 permissions:
