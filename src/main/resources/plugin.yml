@@ -1,5 +1,5 @@
 name: SimpleVoiceChatMusic
-version: '3.1.1'
+version: '3.1.2'
 main: dev.klash.simpleVoiceChatMusic.SimpleVoiceChatMusic
 api-version: '1.21'
 authors: [ GavinGoGaming, MrTron ]
