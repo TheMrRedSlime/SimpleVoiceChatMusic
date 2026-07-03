@@ -8,7 +8,6 @@ description: A port of the SimpleVoiceChatMusic fabric mod by ItzDerock to Paper
 commands:
   music:
     description: Play music in voice chat.
-    usage: /music <...>
     permission: simplevoicechatmusic.music
     aliases: [ svcmusic ]
   music_register_service:
