@@ -69,7 +69,7 @@ public class ModUtils {
         try {
             new URL(userInput);
         } catch (MalformedURLException e) {
-            return "ytsearch:" + userInput;
+            return "scsearch:" + userInput;
         }
 
         return userInput;
