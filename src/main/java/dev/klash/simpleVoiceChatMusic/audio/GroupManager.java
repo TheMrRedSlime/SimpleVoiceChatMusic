@@ -127,12 +127,11 @@ public class GroupManager {
                     serverPlayer.getUniqueId(),
                     (uuid) -> {
                         StaticAudioChannel channel = VoiceChatPlugin.voicechatServerApi.createStaticAudioChannel(
-                            UUID.randomUUID(),
-                            VoiceChatPlugin.voicechatServerApi.fromServerLevel(serverPlayer.getWorld()),
-                            playerConnection
+                            UUID.randomUUID()
                         );
 
                         if (channel == null) return null;
+                        channel.addTarget(playerConnection);
                         channel.setCategory(VoiceChatPlugin.MUSIC_CATEGORY);
 
                         return channel;

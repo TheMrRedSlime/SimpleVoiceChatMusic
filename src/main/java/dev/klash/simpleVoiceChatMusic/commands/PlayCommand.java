@@ -31,7 +31,7 @@ public class PlayCommand implements Command {
                     }
                     // fetches track info from Spotify
                     SpotifyHandler.TrackInfo trackInfo = SpotifyHandler.fetchTrackInfo(trackId);
-                    String searchQuery = "ytsearch:" + trackInfo.getCombinedQuery();
+                    String searchQuery = "scsearch:" + trackInfo.getCombinedQuery();
                     runPlayTask(context, searchQuery);
                 } catch (Exception e) {
                     // If there was an error with Spotify integration, inform the user and fallback.

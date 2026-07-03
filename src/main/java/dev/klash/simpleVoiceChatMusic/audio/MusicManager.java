@@ -6,6 +6,9 @@ import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import de.maxhenkel.voicechat.api.Group;
 import dev.klash.simpleVoiceChatMusic.SimpleVoiceChatMusic;
 import dev.lavalink.youtube.YoutubeAudioSourceManager;
+import dev.klash.simpleVoiceChatMusic.util.YtDlpDownloader;
+import com.github.topi314.lavasrc.ytdlp.YtdlpAudioSourceManager;
+import java.nio.file.Path;
 import org.bukkit.Server;
 
 import java.util.HashMap;
@@ -29,8 +32,26 @@ public class MusicManager {
                 com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.class
         );
 
-        YoutubeAudioSourceManager ytSourceManager = new YoutubeAudioSourceManager();
-        this.playerManager.registerSourceManager(ytSourceManager);
+        try {
+            YtDlpDownloader downloader = new YtDlpDownloader(SimpleVoiceChatMusic.get());
+            Path ytDlpPath = downloader.getOrDownloadYtDlp();
+            
+            YtdlpAudioSourceManager ytdlpSource = new YtdlpAudioSourceManager(
+                ytDlpPath.toString(),
+                10,
+                25,
+                1000,
+                null,
+                null
+            );
+            this.playerManager.registerSourceManager(ytdlpSource);
+            SimpleVoiceChatMusic.LOGGER.info("yt-dlp source registered!");
+        } catch (Exception e) {
+            SimpleVoiceChatMusic.LOGGER.severe("Failed to register yt-dlp: " + e.getMessage());
+        }
+
+        //YoutubeAudioSourceManager ytSourceManager = new YoutubeAudioSourceManager();
+        //this.playerManager.registerSourceManager(ytSourceManager);
         SimpleVoiceChatMusic.LOGGER.info("Loaded all sources!");
     }
 

@@ -32,8 +32,8 @@ public class SearchLoadHandler implements AudioLoadResultHandler {
 
         if (source != null) {
             this.group.broadcast(
-                    Text.literal(Objects.requireNonNull(source).getName())
-                            .append(Text.literal(" queued "))
+                    Objects.requireNonNull(Text.literal(Objects.requireNonNull(source).getName()))
+                            .append(Objects.requireNonNull(Text.literal(" queued ")))
                             .append(ModUtils.trackInfo(track.getInfo(), true))
             );
         }
