@@ -36,8 +36,11 @@ This plugin was lightly tested, but heres some bugs I've found so far:
 - @MrTronMan only tested Spotify, SoundCloud, and YouTube all seem to be working fine.
 - To search a **YouTube URL** you MUST type `ytsearch:(URL)` typing it with `/music play` doesn't work because it checks for either spotify URL or just a youtube search query
 - Quotes are not needed around search terms, unlike the original
-- /music bassboost errors if no number is given... oop (*I still didnt fix this*)
 
 ## Credits
 
 The original mod was created by @ItzDerok - check out the original mod via the link at the top of this readme. I (@GavinGoGaming) have gotten permission to port the mod to Paper using SVC's bukkit api [here](https://github.com/ItzDerock/simplevoicechat-music/issues/7) and @MrTronMan has kept up the plugin with spotify fixes.
+
+Thanks to @GavinGoGaming for creating the Original Plugin.
+I wanted to patch it with yt-dlp and auto update it so that it wouldnt break if youtube or soundcloud did an update to their api
+I also wanted to make it work

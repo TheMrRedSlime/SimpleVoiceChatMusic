@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import io.github.cdimascio.dotenv.Dotenv;
 import okhttp3.Credentials;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;

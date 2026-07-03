@@ -1,9 +1,5 @@
 package dev.klash.simpleVoiceChatMusic.commands;
 
-import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import dev.klash.simpleVoiceChatMusic.SimpleVoiceChatMusic;
 import dev.klash.simpleVoiceChatMusic.audio.GroupManager;
 import dev.klash.simpleVoiceChatMusic.audio.MusicManager;

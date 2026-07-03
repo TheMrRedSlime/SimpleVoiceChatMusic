@@ -6,8 +6,6 @@ import de.maxhenkel.voicechat.api.VoicechatServerApi;
 import de.maxhenkel.voicechat.api.VolumeCategory;
 import de.maxhenkel.voicechat.api.events.EventRegistration;
 import de.maxhenkel.voicechat.api.events.VoicechatServerStartedEvent;
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
 
 public class VoiceChatPlugin implements VoicechatPlugin {
 

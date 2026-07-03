@@ -9,8 +9,6 @@ import dev.klash.simpleVoiceChatMusic.util.Text;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.logging.Level;
 
 import static dev.klash.simpleVoiceChatMusic.util.ModUtils.checkPlayerGroup;

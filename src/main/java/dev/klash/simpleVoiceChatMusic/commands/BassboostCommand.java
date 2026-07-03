@@ -1,12 +1,5 @@
 package dev.klash.simpleVoiceChatMusic.commands;
 
-import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.arguments.FloatArgumentType;
-import com.mojang.brigadier.arguments.IntegerArgumentType;
-import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.sedmelluq.discord.lavaplayer.filter.equalizer.EqualizerFactory;
-import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import dev.klash.simpleVoiceChatMusic.SimpleVoiceChatMusic;
 import dev.klash.simpleVoiceChatMusic.audio.GroupManager;
 import dev.klash.simpleVoiceChatMusic.audio.MusicManager;
@@ -19,6 +12,18 @@ import static dev.klash.simpleVoiceChatMusic.util.ModUtils.checkPlayerGroup;
 
 public class BassboostCommand implements Command {
     public int execute(Player player, String[] args) throws Exception {
+        if (args.length != 1) {
+            player.sendMessage(() -> Text.literal("Usage: /music bassboost <0-100>"));
+            return 1;
+        }
+        
+        try {
+            Double.parseDouble(args[0]);
+        } catch (NumberFormatException e) {
+            player.sendMessage(() -> Text.literal("Invalid input. Please enter a number between 0 and 100."));
+            return 0;
+        }
+
         float bass = Float.parseFloat(args[0]);
         ModUtils.CheckPlayerGroup result = checkPlayerGroup(player);
         if (result == null) return 1;

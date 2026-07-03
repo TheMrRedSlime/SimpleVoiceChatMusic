@@ -1,6 +1,5 @@
 package dev.klash.simpleVoiceChatMusic.util;
 
-import com.mojang.brigadier.context.CommandContext;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
 import de.maxhenkel.voicechat.api.Group;
 import de.maxhenkel.voicechat.api.VoicechatConnection;
@@ -9,7 +8,6 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.Style;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.net.MalformedURLException;
